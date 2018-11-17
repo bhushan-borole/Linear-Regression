@@ -54,7 +54,7 @@ learning_rate = 0.001
 - The final plot of our best fit line after finding the values of our parameters using Gradient Descent:
 ![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regresion%20with%20gradient%20descent/plot2.png)
 
-- Plotting the cost function wrt number of iterations:
+- Plotting the cost function wrt number of iterations(verification of our iterations):
 ![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regresion%20with%20gradient%20descent/plot3.png)
 
 
