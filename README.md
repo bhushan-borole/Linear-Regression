@@ -1,4 +1,4 @@
-# Regression
+# Linear Regression
 - This is the implementation of simmple linear regression from scratch in python.
 - I have implemented with and without gradient descent.
 - The equation of regression line is represented as:
@@ -78,6 +78,8 @@ learning_rate = 0.001
 		return [b0, b1]
 ```
 - After finding the estimated coefficients we predict the value of y and plot the best-fit line.
+![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regression%20without%20gradient%20descent/plot1.png)
+
 
 
 
