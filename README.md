@@ -19,5 +19,10 @@ Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 	- In this article, we are going to use the Least Squares technique.
 
 	- Now consider:
+		- yᵢ = β₀ + β₁Xᵢ + εᵢ = h(Xᵢ) + εᵢ => εᵢ = yᵢ - h(Xᵢ)
+		- here εᵢ is residual error in iᵗʰ observation.
+		- So our aim is to minimize the total residual error.
+		- We define the squared error or cost function, J as:
+			J(β₀ + β₁) = \frac{1}{2n}\sum_{i=1}^nεᵢ²
 
 
