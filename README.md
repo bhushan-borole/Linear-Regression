@@ -21,7 +21,7 @@ Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 
 ```python
 iterations = 100
-learning_rate = 0.001
+learning_rate = 0.01
 ```
 
 - Now, at each iteration of running Gradient Descent, we will perform the following tasks:
