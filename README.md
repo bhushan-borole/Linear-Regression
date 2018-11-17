@@ -1,4 +1,4 @@
-# Linear Regression
+``# Linear Regression
 - This is the implementation of simmple linear regression from scratch in python.
 - I have implemented with and without gradient descent.
 - The equation of regression line is represented as:
@@ -15,7 +15,7 @@ Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 
 ### With Gradient Descent Implementation:
 - Based on the initial values of parameters, best fit line looks like when plotted against the actual values of X and Y-axis:
-![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regresion%20with%20gradient%20descent/plot1.png)
+![plot1](https://user-images.githubusercontent.com/20074475/48663282-f8433600-eab3-11e8-99ba-a3b24264db9d.png)
 
 - Now, we will run the Gradient Descent algorithm to find the optimal values of our parameters `b[0]` and `b[1]` by running the algorithm 10 times and using learning rate's value to be 0.01:
 
@@ -52,10 +52,10 @@ learning_rate = 0.01
 ```
 
 - The final plot of our best fit line after finding the values of our parameters using Gradient Descent:
-![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regresion%20with%20gradient%20descent/plot2.png)
+![plot2](https://user-images.githubusercontent.com/20074475/48663298-15780480-eab4-11e8-9bf5-ec43aed19397.png)
 
 - Plotting the cost function wrt number of iterations(verification of our iterations):
-![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regresion%20with%20gradient%20descent/plot3.png)
+![plot3](https://user-images.githubusercontent.com/20074475/48663304-24f74d80-eab4-11e8-94d3-6f0119868b83.png)
 
 
 ### Without Gradient Descent Implementation:
