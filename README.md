@@ -76,6 +76,12 @@ learning_rate = 0.001
 		b0 = my - b1 * mx
 
 		return [b0, b1]
+
+	'''
+	Estimated coeffcients: 
+	b0: 0.0 
+	b1: 2.0
+	'''
 ```
 - After finding the estimated coefficients we predict the value of y and plot the best-fit line.
 ![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regression%20without%20gradient%20descent/plot1.png)
