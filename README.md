@@ -27,7 +27,7 @@ learning_rate = 0.01
 Now, at each iteration of running Gradient Descent, we will perform the following tasks:
 - predict values for our label (Y) using our hypothesis/model: `b[0] + b[1] * x`
 - compute cost function using the actual and our predicted values of Y
-- simultaneously update the values of `b[0]` and `b[1`
+- simultaneously update the values of `b[0]` and `b[1]`
 
 
 - Without Gradient Descent Implementation:
