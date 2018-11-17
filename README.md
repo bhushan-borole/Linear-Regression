@@ -23,6 +23,6 @@ Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 		- here εᵢ is residual error in iᵗʰ observation.
 		- So our aim is to minimize the total residual error.
 		- We define the squared error or cost function, J as:
-			J(β₀ + β₁) = \frac{1}{2n}\sum_{i=1}^nεᵢ²
+			![formula](/readmes/img/7e461e493791e490950b5706050ee9242220dfac.latex "J(β₀ + β₁) = \frac{1}{2n}\sum_{i=1}^nεᵢ²")
 
 
