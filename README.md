@@ -13,7 +13,7 @@ X = np.array([0,1,2,3,4,5,6,7,8,9,10])
 Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 ```
 
-With Gradient Descent Implementation:
+### With Gradient Descent Implementation:
 - Based on the initial values of parameters, this is how our best fit line looks like when plotted against the actual values of X and Y-axis:
 ![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regresion%20with%20gradient%20descent/plot1.png)
 
