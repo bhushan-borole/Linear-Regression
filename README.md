@@ -60,7 +60,7 @@ learning_rate = 0.001
 
 ### Without Gradient Descent Implementation:
 
-- To create our model, we must “learn” or estimate the values of regression coefficients b_0 and b_1. And once we’ve estimated these coefficients, we can use the model to predict responses!
+- To create our model, we must “learn” or estimate the values of regression coefficients `b[0]` and `b[1]`. And once we’ve estimated these coefficients, we can use the model to predict responses!
 
 - In this article, we are going to use the Least Squares technique.
 - In this method we directly calculate the estimated regression coefficients from the given datasets.
