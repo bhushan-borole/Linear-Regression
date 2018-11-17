@@ -37,7 +37,7 @@ def main():
     m = np.size(X) # number of datapoints
 
     iterations = 100
-    learning_rate = 0.001
+    learning_rate = 0.01
     costs = []
     
     #original best-fit line
@@ -59,6 +59,8 @@ def main():
     h = plt.figure('Verification')
     plt.plot(range(iterations), costs, color='b')
     h.show()
+
+    print(b[0], b[1])
 
 if __name__ == '__main__':
     main()
