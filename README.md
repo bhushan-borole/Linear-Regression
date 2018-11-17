@@ -20,7 +20,7 @@ Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 - Now, we will run the Gradient Descent algorithm to find the optimal values of our parameters `b[0]` and `b[1]` by running the algorithm 10 times and using learning rate's value to be 0.01:
 
 ```python
-iterations = 10
+iterations = 100
 learning_rate = 0.001
 ```
 
