@@ -19,7 +19,7 @@ Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 
 - Now, we will run the Gradient Descent algorithm to find the optimal values of our parameters `theta_0` and `theta_1` by running the algorithm 10 times and using learning rate's value to be 0.01:
 
-```
+```python
 iterations = 10
 learning_rate = 0.01
 ```
@@ -28,9 +28,17 @@ learning_rate = 0.01
 	- predict values for our label (Y) using our hypothesis/model: `b[0] + b[1] * x`
 	- compute cost function using the actual and our predicted values of Y
 	- simultaneously update the values of `b[0]` and `b[1]`
+```python
+    for _ in range(iterations):
+        Y_pred = regressor.generate_predicted_values(b)
+        cost = regressor.compute_cost(Y_pred)
+        costs.append(cost)
+        b[0] = b[0] - (learning_rate * ((1/m) * np.sum(Y_pred - Y)))
+        b[1] = b[1] - (learning_rate * ((1/m) * np.sum((Y_pred - Y) * X)))
+```
 
 
-- Without Gradient Descent Implementation:
+### Without Gradient Descent Implementation:
 	- To create our model, we must “learn” or estimate the values of regression coefficients b_0 and b_1. And once we’ve estimated these coefficients, we can use the model to predict responses!
 
 	- In this article, we are going to use the Least Squares technique.
