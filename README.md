@@ -39,16 +39,16 @@ learning_rate = 0.01
 
 - After running Gradient Descent 10 times and updating the values of `theta_0` and `theta_1` at each iteration, we can compare the values of our parameters and the corresponding cost functions before and after running Gradient Descent:
 
-```
-Before Gradient Descent:
-b[0] = 0
-b[1] = 4
-cost: 70.0
+```python
+	#Before Gradient Descent:
+	b[0] = 0
+	b[1] = 4
+	cost = 70.0
 
-After Gradient Descent:
-b[0]: -0.2709674247575545 
-b[1]: 2.0631089174216615 
-cost: 0.03538502177709652
+	#After Gradient Descent:
+	b[0] = -0.2709674247575545 
+	b[1] = 2.0631089174216615 
+	cost = 0.03538502177709652
 ```
 
 
