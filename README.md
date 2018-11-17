@@ -8,7 +8,7 @@
 
 We start off by defining the values in X and Y-axis by storing them inside two variables:
 
-```
+```python
 X = np.array([0,1,2,3,4,5,6,7,8,9,10])
 Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 ```
