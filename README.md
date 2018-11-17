@@ -14,7 +14,7 @@ Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 ```
 
 ### With Gradient Descent Implementation:
-- Based on the initial values of parameters, this is how our best fit line looks like when plotted against the actual values of X and Y-axis:
+- Based on the initial values of parameters, best fit line looks like when plotted against the actual values of X and Y-axis:
 ![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regresion%20with%20gradient%20descent/plot1.png)
 
 - Now, we will run the Gradient Descent algorithm to find the optimal values of our parameters `theta_0` and `theta_1` by running the algorithm 10 times and using learning rate's value to be 0.01:
@@ -52,6 +52,7 @@ learning_rate = 0.01
 ```
 
 The final plot of our best fit line after finding the values of our parameters using Gradient Descent:
+
 ![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regresion%20with%20gradient%20descent/plot2.png)
 
 Plotting the cost function wrt number of iterations in Gradient Descent to verify whether the cost function of our model decreases with each iteration:
