@@ -13,11 +13,11 @@ X = np.array([0,1,2,3,4,5,6,7,8,9,10])
 Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 ```
 
-We have also initialized our parameter value `b[1]` to initially be equal to 4:
+- Without Gradient Descent Implementation:
+	- To create our model, we must “learn” or estimate the values of regression coefficients b_0 and b_1. And once we’ve estimated these coefficients, we can use the model to predict responses!
 
-```
-# initializing theta parameters
-b = [0, 4]
-```
+	- In this article, we are going to use the Least Squares technique.
+
+	- Now consider:
 
 
