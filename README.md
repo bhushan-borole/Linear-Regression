@@ -13,17 +13,18 @@ X = np.array([0,1,2,3,4,5,6,7,8,9,10])
 Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
 ```
 
+- With Gradient Descent Implementation:
+Based on the initial values of parameters, this is how our best fit line looks like when plotted against the actual values of X and Y-axis:
+![alt text](https://github.com/bhushan-borole/Linear-Regression/blob/master/Linear%20Regresion%20with%20gradient%20descent/plot1.png)
+
+
 - Without Gradient Descent Implementation:
 	- To create our model, we must “learn” or estimate the values of regression coefficients b_0 and b_1. And once we’ve estimated these coefficients, we can use the model to predict responses!
 
 	- In this article, we are going to use the Least Squares technique.
+	- β₁ = SSxy / SSxx
+	- β₀ = y_mean - β₁ * x_mean
 
-	- Now consider:
-		- yᵢ = β₀ + β₁Xᵢ + εᵢ = h(Xᵢ) + εᵢ => εᵢ = yᵢ - h(Xᵢ)
-		- here εᵢ is residual error in iᵗʰ observation.
-		- So our aim is to minimize the total residual error.
-		- We define the squared error or cost function, J as:
-			![formula](/readmes/img/7e461e493791e490950b5706050ee9242220dfac.latex "J(β₀ + β₁) = \frac{1}{2n}\sum_{i=1}^nεᵢ²")
-			"renderer": "http://chart.googleapis.com/chart?cht=tx&chl={"J(β₀+β₁)=\frac{1}{2n}\sum_{i=1}^nεᵢ²"}"
+
 
 
