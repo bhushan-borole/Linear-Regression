@@ -37,6 +37,20 @@ learning_rate = 0.01
         b[1] = b[1] - (learning_rate * ((1/m) * np.sum((Y_pred - Y) * X)))
 ```
 
+- After running Gradient Descent 10 times and updating the values of `theta_0` and `theta_1` at each iteration, we can compare the values of our parameters and the corresponding cost functions before and after running Gradient Descent:
+
+```
+Before Gradient Descent:
+b[0] = 0
+b[1] = 4
+cost: 70.0
+
+After Gradient Descent:
+b[0]: -0.2709674247575545 
+b[1]: 2.0631089174216615 
+cost: 0.03538502177709652
+```
+
 
 ### Without Gradient Descent Implementation:
 	- To create our model, we must “learn” or estimate the values of regression coefficients b_0 and b_1. And once we’ve estimated these coefficients, we can use the model to predict responses!
