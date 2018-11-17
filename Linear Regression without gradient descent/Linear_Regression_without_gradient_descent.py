@@ -1,11 +1,3 @@
-'''
-The equation of regression line is represented as:
-h(Xᵢ) = β₀ + β₁Xᵢ
-- h(Xᵢ) represents the predicted response value for iᵗʰ observation
-- β₀ and β₁ are the regression coeffcients and represent y-intercept and slope of regression line respectiely.
-
-'''
-import random
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -34,8 +26,8 @@ def plot(x, y, b):
 
 
 def main():
-	x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-	y = np.array(random.sample(range(40), 10))
+	x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+	y = np.array([0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20])
 
 	b = get_estimate_coeff(x, y)
 	print("Estimated coeffcients: \nb0: {} \nb1: {} ".format(b[0], b[1]))

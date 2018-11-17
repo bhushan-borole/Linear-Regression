@@ -59,11 +59,25 @@ learning_rate = 0.001
 
 
 ### Without Gradient Descent Implementation:
-	- To create our model, we must “learn” or estimate the values of regression coefficients b_0 and b_1. And once we’ve estimated these coefficients, we can use the model to predict responses!
 
-	- In this article, we are going to use the Least Squares technique.
-	- β₁ = SSxy / SSxx
-	- β₀ = y_mean - β₁ * x_mean
+- To create our model, we must “learn” or estimate the values of regression coefficients b_0 and b_1. And once we’ve estimated these coefficients, we can use the model to predict responses!
+
+- In this article, we are going to use the Least Squares technique.
+- In this method we directly calculate the estimated regression coefficients from the given datasets.
+```python
+	def get_estimate_coeff(x, y):
+		n = np.size(x)
+
+		mx, my = np.mean(x), np.mean(y)
+		SSxy = np.sum((y * x) - (n * mx * my))
+		SSxx = np.sum((x * x) - (n * mx * mx))
+
+		b1 = SSxy / SSxx
+		b0 = my - b1 * mx
+
+		return [b0, b1]
+```
+- After finding the estimated coefficients we predict the value of y and plot the best-fit line.
 
 
 
