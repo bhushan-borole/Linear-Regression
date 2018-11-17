@@ -60,8 +60,6 @@ def main():
     plt.plot(range(iterations), costs, color='b')
     h.show()
 
-    print(b[0], b[1])
-
 if __name__ == '__main__':
     main()
 
