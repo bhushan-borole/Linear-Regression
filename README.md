@@ -1,4 +1,4 @@
-``# Linear Regression
+# Linear Regression
 - This is the implementation of simmple linear regression from scratch in python.
 - I have implemented with and without gradient descent.
 - The equation of regression line is represented as:
