@@ -5,13 +5,34 @@ class Linear_Regression:
     def __init__(self, X, Y):
         self.X = X
         self.Y = Y
+        self.b = [0, 0]
+    
+    def update_coeffs(self, learning_rate):
+        Y_pred = self.predict()
+        Y = self.Y
+        m = len(Y)
+        self.b[0] = self.b[0] - (learning_rate * ((1/m) * np.sum(Y_pred - Y)))
+        self.b[1] = self.b[1] - (learning_rate * ((1/m) * np.sum((Y_pred - Y) * self.X)))
 
-    def generate_predicted_values(self, b):
+    def predict(self, X=[]):
         Y_pred = np.array([])
-        for x in self.X:
+        if not X: X = self.X
+        b = self.b
+        for x in X:
             Y_pred = np.append(Y_pred, b[0] + (b[1] * x))
 
         return Y_pred
+    
+    def get_current_accuracy(self, Y_pred):
+        p, e = Y_pred, self.Y
+        n = len(Y_pred)
+        return 1-sum(
+            [
+                abs(p[i]-e[i])/e[i]
+                for i in range(n)
+                if e[i] != 0]
+        )/n
+    #def predict(self, b, yi):
 
     def compute_cost(self, Y_pred):
         m = len(self.Y)
@@ -26,31 +47,34 @@ class Linear_Regression:
 
 
 def main():
-    X = np.array([0,1,2,3,4,5,6,7,8,9,10])
-    Y = np.array([0,2,4,6,8,10,12,14,16,18,20])
+    X = np.array([i for i in range(11)])
+    Y = np.array([2*i for i in range(11)])
 
     regressor = Linear_Regression(X, Y)
 
-    #intializing coefficients
-    b = [0, 4]
-
-    m = np.size(X) # number of datapoints
-
-    iterations = 100
+    iterations = 0
+    steps = 100
     learning_rate = 0.01
     costs = []
     
     #original best-fit line
-    Y_pred = regressor.generate_predicted_values(b)
+    Y_pred = regressor.predict()
     regressor.plot_best_fit(Y_pred, 'Initial Best Fit Line')
     
 
-    for _ in range(iterations):
-        Y_pred = regressor.generate_predicted_values(b)
+    while 1:
+        Y_pred = regressor.predict()
         cost = regressor.compute_cost(Y_pred)
         costs.append(cost)
-        b[0] = b[0] - (learning_rate * ((1/m) * np.sum(Y_pred - Y)))
-        b[1] = b[1] - (learning_rate * ((1/m) * np.sum((Y_pred - Y) * X)))
+        regressor.update_coeffs(learning_rate)
+        
+        iterations += 1
+        if iterations % steps == 0:
+            print(iterations, "epochs elapsed")
+            print("Current accuracy is :", regressor.get_current_accuracy(Y_pred))
+            stop = input("Do you want to stop (y/*)??")
+            if stop == "y":
+                break
 
     #final best-fit line
     regressor.plot_best_fit(Y_pred, 'Final Best Fit Line')
@@ -59,6 +83,9 @@ def main():
     h = plt.figure('Verification')
     plt.plot(range(iterations), costs, color='b')
     h.show()
+
+    # if user wants to predict using the regressor:
+    regressor.predict([i for i in range(10)])
 
 if __name__ == '__main__':
     main()
