@@ -42,7 +42,7 @@ learning_rate = 0.01
 ```python
 	#Before Gradient Descent:
 	b[0] = 0
-	b[1] = 4
+	b[1] = 0
 	cost = 70.0
 
 	#After Gradient Descent:
