@@ -29,12 +29,12 @@ learning_rate = 0.01
 	- compute cost function using the actual and our predicted values of Y
 	- simultaneously update the values of `b[0]` and `b[1]`
 ```python
-    for _ in range(iterations):
-        Y_pred = regressor.generate_predicted_values(b)
-        cost = regressor.compute_cost(Y_pred)
-        costs.append(cost)
-        b[0] = b[0] - (learning_rate * ((1/m) * np.sum(Y_pred - Y)))
-        b[1] = b[1] - (learning_rate * ((1/m) * np.sum((Y_pred - Y) * X)))
+    def update_coeffs(self, learning_rate):
+        Y_pred = self.predict()
+        Y = self.Y
+        m = len(Y)
+        self.b[0] = self.b[0] - (learning_rate * ((1/m) * np.sum(Y_pred - Y)))
+        self.b[1] = self.b[1] - (learning_rate * ((1/m) * np.sum((Y_pred - Y) * self.X)))
 ```
 
 - After running Gradient Descent 10 times and updating the values of `b[0]` and `b[1]` at each iteration, we can compare the values of our parameters and the corresponding cost functions before and after running Gradient Descent:
