@@ -49,10 +49,10 @@ def main():
 	numpy.ones(shape, dtype, order)
 	@param shape : integer or sequence of integers
 	@param order : C_contiguous or F_contiguous
-			       C-contiguous order in memory(last index varies the fastest)
-			       C order means that operating row-rise on the array will be slightly quicker
-			       FORTRAN-contiguous order in memory (first index varies the fastest).
-			       F order means that column-wise operations will be faster.
+		       C-contiguous order in memory(last index varies the fastest)
+		       C order means that operating row-rise on the array will be slightly quicker
+		       FORTRAN-contiguous order in memory (first index varies the fastest).
+		       F order means that column-wise operations will be faster.
 	@param dtype : [optional, float(byDeafult)] Data type of returned array.  
 	'''
 	ones = np.ones([X.shape[0], 1])
